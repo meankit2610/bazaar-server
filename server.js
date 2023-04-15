@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://bazaar-e-commerce.vercel.app",
+  })
+);
 require("dotenv").config();
 const port = process.env.PORT;
 const bodyParser = require("body-parser");
